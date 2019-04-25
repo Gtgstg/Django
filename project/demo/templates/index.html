@@ -1,0 +1,23 @@
+<html>
+<head><title></title>
+</head>
+<body>
+	{% extends 'header.html' %}
+	{% block index %}
+<table border="3" align="center">
+      <tr>
+        <td>
+          <form action="/about/" method="post">{% csrf_token %}
+            <h2><u>Insert Number here:</u></h2>
+            <label for="username">Number:</label>
+            <input type="text" name="username" value="" id="username">
+            <br><br>
+        &nbsp;&nbsp;&nbsp;
+        <input type="submit" name="Insert" value="Insert"></form></td></tr>
+    </table>
+    &nbsp;&nbsp;&nbsp;
+    <a href="{% url 'demo:logout' %}" class="btn btn-info" role="button">Show Me The Tree</a>	
+    <a href="{% url 'demo:loggedin' %}" class="btn btn-info" role="button">Level wise sum</a> 
+{% endblock %}	
+</body>
+</html>

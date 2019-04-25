@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+{% extends 'header.html' %}
+
+{% block content %}
+ <ul>
+	{% for a in arr %}
+	<li>
+    <h2  style="color:#FFF656">{{a}}</h2>
+	</li>
+{% endfor %}
+ </ul>
+{% endblock %}
+</body>
+</html>

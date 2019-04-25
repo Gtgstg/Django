@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		{%  extends 'header.html' %}
+		{%  block content %}
+		<table border="3" align="center">
+			<tr>
+				<td>
+					<form action="/auth/" method="post">{% csrf_token %}
+						<h2><u>Insert your String here:</u></h2>
+						<label for="username">String:</label>
+						<input type="text" name="username" value="" id="username">
+						<br><br>
+				&nbsp;&nbsp;&nbsp;
+				<input type="submit" name="Insert" value="Insert"></form></td></tr>
+		</table>
+		&nbsp;&nbsp;&nbsp;
+		<a href="{% url 'demo:success' %}" class="btn btn-info" role="button">Sort Now</a>
+		{%  endblock %}
+	</body>
+</html>

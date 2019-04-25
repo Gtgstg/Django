@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+{% extends 'header.html' %}
+{% block content %}
+<a href="{% url 'demo:index' %}" class="btn btn-info" role="button">Page 1</a>
+<a href="{% url 'demo:login' %}" class="btn btn-info" role="button">Page 2</a>
+{% endblock %}
+</body>
+</html>
